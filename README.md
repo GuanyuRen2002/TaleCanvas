@@ -10,7 +10,7 @@
 - 🌍 **场景连贯性**: 场景设置与故事情节完美匹配
 - 📱 **现代UI设计**: 美观的界面，左侧聊天，右侧绘本展示
 - 📄 **PDF导出**: 支持导出完整绘本为PDF文件
-- 🎵 **语音合成**: 集成Azure语音服务（可选）
+- 🎵 **语音合成**: 集成Azure语音服务
 
 ## 🛠️ 技术栈
 
@@ -19,7 +19,7 @@
 - **OpenAI API**: GPT-4文本生成 + DALL-E图像生成
 - **ReportLab**: PDF生成
 - **Pillow**: 图像处理
-- **Azure Cognitive Services**: 语音合成（可选）
+- **Azure Cognitive Services**: 语音合成
 
 ### 前端
 - **HTML5/CSS3**: 现代响应式界面
@@ -235,9 +235,6 @@ TaleCanvas/
 - [ ] 添加音频朗读功能
 - [ ] 移动端适配优化
 
-## 📄 许可证
-
-本项目采用 MIT 许可证。详见 LICENSE 文件。
 
 ## 🤝 贡献指南
 
@@ -247,7 +244,7 @@ TaleCanvas/
 
 如有问题或建议，请通过以下方式联系：
 - GitHub Issues
-- Email: your-email@example.com
+- Email: guanyu_ren@163.com
 
 ---
 
