@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryCanvas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧聊天区域 -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <h2>StoryCanvas</h2>
+                <p></p>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>你好！我是StoryCanvas智能绘本生成器。请告诉我你想要创作什么样的故事？</p>
+                        <p>我可以帮你生成包含10页内容的完整绘本，每页都有精美的插图哦！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="userInput" 
+                            class="chat-input" 
+                            placeholder="告诉我你想要什么样的故事吧！比如：我想要一个关于小兔子冒险的故事..."
+                            rows="3"
+                        ></textarea>
+                        <button type="button" id="sendBtn" class="send-btn">
+                            <span class="send-icon">🚀</span>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        <p>💡 你可以告诉我：</p>
+                        <ul>
+                            <li>想要什么主题的故事（勇气、友谊、冒险...）</li>
+                            <li>喜欢什么角色（小动物、超级英雄、公主...）</li>
+                            <li>想要什么场景（森林、城堡、太空...）</li>
+                            <li>或者就说"给我一个好故事"，让我自由发挥！</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右侧绘本展示区域 -->
+        <div class="storybook-section">
+            <div class="storybook-header">
+                <h3>我的绘本</h3>
+                <div class="storybook-controls">
+                    <button id="prevBtn" class="nav-btn" disabled>←</button>
+                    <span id="pageIndicator">封面</span>
+                    <button id="nextBtn" class="nav-btn" disabled>→</button>
+                    <div class="audio-controls">
+                        <button id="playBtn" class="audio-btn" title="播放/暂停朗读" disabled>🔊</button>
+                        <button id="autoPlayBtn" class="audio-btn" title="自动朗读全书" disabled>📖</button>
+                    </div>
+                    <button id="exportBtn" class="export-btn" style="display: none;">导出PDF</button>
+                </div>
+            </div>
+            
+            <div class="storybook-content" id="storybookContent">
+                <div class="storybook-placeholder">
+                    <div class="placeholder-icon">📚</div>
+                    <p>请在左侧输入故事信息开始创作您的绘本</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 加载提示 -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>正在生成您的绘本...</p>
+            <p class="loading-detail" id="loadingDetail">准备中...</p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
