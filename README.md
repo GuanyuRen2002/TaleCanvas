@@ -16,9 +16,8 @@
 
 ### 后端
 - **Flask**: Web框架
-- **OpenAI API**: GPT-4文本生成 + DALL-E图像生成
+- **Gemini API**: 文本生成 + 图像生成
 - **ReportLab**: PDF生成
-- **Pillow**: 图像处理
 - **Azure Cognitive Services**: 语音合成
 
 ### 前端
